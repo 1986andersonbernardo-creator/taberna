@@ -24,3 +24,4 @@ Thumbs.db
 # Backup
 *.backup
 *.ps1
+.env*
