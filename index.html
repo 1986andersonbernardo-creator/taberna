@@ -1,0 +1,1007 @@
+<!DOCTYPE html>
+<!-- ============================================
+     BOTECO TABERNA - SINGLE PAGE WEBSITE
+     ============================================
+     Site completo em página única com navegação
+     por âncoras e scroll suave entre seções.
+     
+     SEÇÕES:
+     #home        - Hero Banner (imagem 3 apenas)
+     #sobre       - História do boteco
+     #cardapio    - Cardápio completo
+     #galeria     - Galeria moderna
+     #espaco-atipico - Espaço Atípico (inclusão)
+     #localizacao - Endereço, mapa e WhatsApp
+     #rodape      - Footer completo
+     
+     Mantido por: Boteco Taberna
+     ============================================ -->
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- ==========================================
+         SEO - META TAGS
+         ========================================== -->
+    <title>Boteco Taberna | Petiscos, Churrasco & Drinks Premium</title>
+    <meta name="description" content="Boteco Taberna - Um pub sofisticado com a essência do boteco brasileiro. Petiscos artesanais, churrasco premium, hambúrgueres gourmet, drinks exclusivos e música ao vivo.">
+    <meta name="keywords" content="boteco, bar, pub, petiscos, churrasco, hambúrguer, drinks, cerveja, caipirinha, música ao vivo, happy hour">
+    <meta name="theme-color" content="#050505">
+    
+    <!-- OPEN GRAPH -->
+    <meta property="og:title" content="Boteco Taberna | Petiscos, Churrasco & Drinks Premium">
+    <meta property="og:description" content="Um pub sofisticado com a essência do boteco brasileiro. Experiências únicas com petiscos artesanais e drinks exclusivos.">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="pt_BR">
+    <meta property="og:url" content="https://www.botecataberna.com.br">
+    <meta property="og:image" content="./assets/images/og-image.jpg">
+    
+    <!-- TWITTER CARDS -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Boteco Taberna">
+    <meta name="twitter:description" content="Petiscos artesanais, churrasco premium e drinks exclusivos em um ambiente sofisticado.">
+    <meta name="twitter:image" content="./assets/images/og-image.jpg">
+    
+    <!-- CANÔNICA -->
+    <link rel="canonical" href="https://www.botecataberna.com.br">
+    
+    <!-- FAVICON -->
+    <link rel="icon" href="./assets/images/logo.png" type="image/png">
+    
+    <!-- PRELOAD - RECURSOS CRÍTICOS DO HERO -->
+    <link rel="preload" as="image" href="./assets/images/hero-banner.jpg" fetchpriority="high">
+    <link rel="preload" as="image" href="./assets/images/logocompleto.png" fetchpriority="high">
+    
+    <!-- FONT AWESOME -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer">
+    
+    <!-- GOOGLE FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,700&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="./assets/css/main.css">
+    <link rel="stylesheet" href="./assets/css/hero.css">
+    <link rel="stylesheet" href="./assets/css/animations.css">
+    <link rel="stylesheet" href="./assets/css/gallery.css">
+    
+    <!-- ==========================================
+         SCHEMA.ORG - DADOS ESTRUTURADOS
+         ========================================== -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BarOrPub",
+        "@id": "https://www.seusite.com.br/#botecotaberna",
+        "name": "Boteco Taberna",
+        "url": "https://www.seusite.com.br",
+        "image": "https://www.seusite.com.br/assets/images/banner-social.jpg",
+        "logo": "https://www.seusite.com.br/assets/images/logo.png",
+        "description": "Boteco Taberna é um bar com música ao vivo, drinks especiais, cervejas geladas, petiscos e ambiente aconchegante.",
+        "telephone": "+55XXXXXXXXXXX",
+        "email": "contato@seusite.com.br",
+        "priceRange": "$$",
+        "acceptsReservations": true,
+        "servesCuisine": ["Petiscos","Comida de Boteco","Hambúrguer","Porções"],
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Rua Exemplo, 123",
+            "addressLocality": "Cidade",
+            "addressRegion": "PE",
+            "postalCode": "00000-000",
+            "addressCountry": "BR"
+        },
+        "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": "-8.000000",
+            "longitude": "-34.000000"
+        },
+        "hasMap": "https://maps.google.com/?q=-8.000000,-34.000000",
+        "sameAs": [
+            "https://www.instagram.com/boteco.taberna/",
+            "https://www.facebook.com/seuperfil",
+            "https://www.tiktok.com/@seuperfil"
+        ],
+        "openingHoursSpecification": [
+            {
+                "@type": "OpeningHoursSpecification",
+                "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"],
+                "opens": "17:00",
+                "closes": "02:00"
+            },
+            {
+                "@type": "OpeningHoursSpecification",
+                "dayOfWeek": ["Saturday","Sunday"],
+                "opens": "16:00",
+                "closes": "04:00"
+            }
+        ]
+    }
+    </script>
+</head>
+<body>
+    <a href="#home" class="skip-link">Ir para o conteúdo principal</a>
+    <!-- ==========================================
+         PRELOADER/SPASH SCREEN - LOGO COMPLETA
+         ========================================== -->
+    <div class="preloader" id="preloader">
+        <div class="preloader__content">
+            <img src="./assets/images/logocompleto.png" alt="Boteco Taberna Logo" class="preloader__logo">
+        </div>
+    </div>
+
+    <!-- ==========================================
+         HEADER - CABEÇALHO DE NAVEGAÇÃO
+         ========================================== -->
+    <header class="header" id="header">
+        <div class="header__container">
+            <div class="header__logo">
+                <a href="#home">
+                    <img src="./assets/images/logocompleto.png" alt="Boteco Taberna Logo" id="logo">
+                </a>
+            </div>
+            <nav class="header__nav" id="nav" aria-label="Navegação principal">
+                <ul class="nav__list">
+                    <li><a href="#home" class="nav__link active">Home</a></li>
+                    <li><a href="#sobre" class="nav__link">Sobre</a></li>
+                    <li><a href="#cardapio" class="nav__link">Cardápio</a></li>
+                    <li><a href="#galeria" class="nav__link">Galeria</a></li>
+                    <li><a href="#espaco-atipico" class="nav__link">Espaço Atípico</a></li>
+                    <li><a href="#localizacao" class="nav__link">Localização</a></li>
+                </ul>
+            </nav>
+            <div class="header__actions">
+                <a href="https://wa.me/5581985008954" class="btn btn--whatsapp" aria-label="WhatsApp">
+                    <i class="fab fa-whatsapp"></i>
+                </a>
+                <button class="menu-toggle" id="menuToggle" aria-label="Abrir menu" aria-controls="nav" aria-expanded="false">
+                    <span class="hamburger" aria-hidden="true"></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- ==========================================
+         1 — HERO BANNER PREMIUM
+         ========================================== -->
+    <section class="hero" id="home" aria-label="Hero principal do Boteco Taberna">
+        <div class="hero-backdrop">
+            <img src="./assets/images/hero-banner.jpg" alt="Boteco Taberna - Ambiente" class="hero-bgimg" fetchpriority="high">
+        </div>
+        <div class="hero-content">
+            <img
+                src="./assets/images/logocompleto.png"
+                alt="Logo Boteco Taberna"
+                class="hero-logo"
+                loading="eager"
+            >
+            <p class="hero-subtitle">
+                O ponto de encontro perfeito para quem aprecia boa comida,
+                cerveja gelada, música e momentos inesquecíveis.
+            </p>
+            <div class="hero-buttons">
+                <a href="#cardapio" class="btn btn-primary hero-btn-primary">
+                    Ver Cardápio
+                </a>
+                <a href="https://wa.me/5581985008954"
+                   class="btn btn-secondary hero-btn-secondary"
+                   target="_blank">
+                    Reservar Mesa
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================
+         2 — SOBRE
+         ========================================== -->
+    <section class="about section" id="sobre">
+        <div class="section__container">
+            <header class="section__header">
+                <h2 class="section__title">Nossa História</h2>
+                <p class="section__subtitle">Tradição que se renova a cada noite</p>
+            </header>
+            <div class="section__content section__content--split">
+                <div class="section__copy about__content">
+                    <p class="about__text">Fundado em 2020, o Boteco Taberna nasceu da paixão por reunir amigos em torno de boas conversas, boas comidas e momentos inesquecíveis. Nossa missão é manter viva a tradição do boteco brasileiro com um toque de sofisticação.</p>
+                    <p class="about__text">Cada detalhe do ambiente foi pensado para proporcionar conforto e aconchego. Madeira natural, iluminação quente e um acervo musical que cobre os clássicos do samba ao rock internacional. Um espaço onde cada visita se transforma em memória.</p>
+                    <p class="about__text">O nome "Taberna" remete aos antigos pubs europeus, onde amigos se reuniam para compartilhar histórias. Nosso objetivo é criar um espaço onde você se sinta em casa, mesmo estando fora dela.</p>
+                    <div class="about__actions" style="margin-top: var(--space-6);">
+                        <a href="#cardapio" class="btn btn--primary">Conheça nosso cardápio</a>
+                    </div>
+                </div>
+                <div class="section-media about__image">
+                    <img src="./assets/images/banner1.jpg" alt="Interior do Boteco Taberna - Ambiente acolhedor" loading="lazy">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- MISSÃO E VALORES -->
+    <section class="mission-values section">
+        <div class="section__container">
+            <div class="section__content">
+                <div class="section__grid section__grid--cards mission-values__grid">
+                    <article class="section-card mission-card" data-delay="0">
+                        <div class="section-card__icon"><i class="fas fa-bullseye"></i></div>
+                        <h3>Missão</h3>
+                        <p>Criar um ambiente acolhedor onde amigos possam se reunir para celebrar a vida através de boas conversas, comida de qualidade e música que emocione.</p>
+                    </article>
+                    <article class="section-card values-card" data-delay="100">
+                        <div class="section-card__icon"><i class="fas fa-heart"></i></div>
+                        <h3>Valores</h3>
+                        <ul>
+                            <li>Qualidade em cada detalhe</li>
+                            <li>Respeito ao cliente</li>
+                            <li>Tradição e inovação</li>
+                            <li>Sustentabilidade</li>
+                            <li>Aconchego sem igual</li>
+                        </ul>
+                    </article>
+                    <article class="section-card experience-card" data-delay="200">
+                        <div class="section-card__icon"><i class="fas fa-star"></i></div>
+                        <h3>Experiência</h3>
+                        <p>Cada visita ao Taberna é uma experiência sensorial completa, do aroma dos temperos ao som dos clássicos rock e samba. Um lugar para criar histórias.</p>
+                    </article>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================
+         3 — CARDÁPIO (substitui "Nossos Destaques")
+         ========================================== -->
+    <section class="highlights section" id="cardapio">
+        <div class="section__container">
+            <header class="section__header">
+                <h2 class="section__title">Nosso Cardápio</h2>
+                <p class="section__subtitle">Sabores que contam histórias — petiscos, churrasco, drinks e mais</p>
+            </header>
+            <div class="section__content">
+                <div class="section__grid section__grid--cards highlights__grid">
+                    <article class="section-card highlight-card" data-delay="0">
+                        <div class="section-card__media highlight-card__image">
+                            <img src="./assets/images/petiscosartesanal.jpg" alt="Petiscos Artesanais" loading="lazy">
+                        </div>
+                        <div class="section-card__body">
+                            <h3 class="highlight-card__title">Petiscos Artesanais</h3>
+                            <p class="highlight-card__text">Ingredientes selecionados e preparo meticuloso para momentos de conversa e celebração.</p>
+                        </div>
+                    </article>
+                    <article class="section-card highlight-card" data-delay="100">
+                        <div class="section-card__media highlight-card__image">
+                            <img src="./assets/images/fraldinha.jpg" alt="Churrasco Premium" loading="lazy">
+                        </div>
+                        <div class="section-card__body">
+                            <h3 class="highlight-card__title">Churrasco Premium</h3>
+                            <p class="highlight-card__text">Cortes especiais com acompanhamentos que harmonizam perfeitamente. Uma experiência única.</p>
+                        </div>
+                    </article>
+                    <article class="section-card highlight-card" data-delay="200">
+                        <div class="section-card__media highlight-card__image">
+                            <img src="./assets/images/chapadacasa.jpeg" alt="Chapa da Casa" loading="lazy">
+                        </div>
+                        <div class="section-card__body">
+                            <h3 class="highlight-card__title">Chapa da Casa</h3>
+                            <p class="highlight-card__text">Carnes grelhadas na chapa, acompanhadas de ingredientes selecionados para uma experiência única.</p>
+                        </div>
+                    </article>
+                    <article class="section-card highlight-card" data-delay="300">
+                        <div class="section-card__media highlight-card__image">
+                            <img src="./assets/images/drinksexclusivos.jpeg" alt="Drinks Exclusivos" loading="lazy">
+                        </div>
+                        <div class="section-card__body">
+                            <h3 class="highlight-card__title">Drinks Exclusivos</h3>
+                            <p class="highlight-card__text">Coquetéis artesanais com destilados premium e frutas frescas. Sabores que surpreendem.</p>
+                        </div>
+                    </article>
+                    <article class="section-card highlight-card" data-delay="400">
+                        <div class="section-card__media highlight-card__image">
+                            <img src="./assets/images/pilsen.jpeg" alt="Cervejas Artesanais" loading="lazy">
+                        </div>
+                        <div class="section-card__body">
+                            <h3 class="highlight-card__title">Cervejas Especiais</h3>
+                            <p class="highlight-card__text">Seleção das melhores cervejas nacionais e internacionais, sempre na temperatura ideal.</p>
+                        </div>
+                    </article>
+                    <article class="section-card highlight-card" data-delay="500">
+                        <div class="section-card__media highlight-card__image">
+                            <img src="./assets/images/caipirinhaclassica.jpg" alt="Caipirinhas Clássicas" loading="lazy">
+                        </div>
+                        <div class="section-card__body">
+                            <h3 class="highlight-card__title">Caipirinhas Clássicas</h3>
+                            <p class="highlight-card__text">A autenticidade da caipirinha preparada com cachaça 100% artesanal. Nosso clássico favorito.</p>
+                        </div>
+                    </article>
+                    <article class="section-card highlight-card" data-delay="600">
+                        <div class="section-card__media highlight-card__image">
+                            <img src="./assets/images/torresmo.jpg" alt="Torresmo Crocante" loading="lazy">
+                        </div>
+                        <div class="section-card__body">
+                            <h3 class="highlight-card__title">Torresmo Crocante</h3>
+                            <p class="highlight-card__text">Torresmo pururuca feito na hora, crocante por fora e macio por dentro. Perfeito para compartilhar.</p>
+                        </div>
+                    </article>
+                    <article class="section-card highlight-card" data-delay="700">
+                        <div class="section-card__media highlight-card__image">
+                            <img src="./assets/images/iscadepeixe.jpg" alt="Isca de Peixe" loading="lazy">
+                        </div>
+                        <div class="section-card__body">
+                            <h3 class="highlight-card__title">Isca de Peixe</h3>
+                            <p class="highlight-card__text">Filés de peixe empanados, crocantes e dourados. Acompanham molho especial da casa.</p>
+                        </div>
+                    </article>
+                    <article class="section-card highlight-card" data-delay="800">
+                        <div class="section-card__media highlight-card__image">
+                            <img src="./assets/images/camarao.jpeg" alt="Camarão" loading="lazy">
+                        </div>
+                        <div class="section-card__body">
+                            <h3 class="highlight-card__title">Camarão Premium</h3>
+                            <p class="highlight-card__text">Camarões selecionados preparados com temperos especiais. Uma verdadeira experiência gastronômica.</p>
+                        </div>
+                    </article>
+                </div>
+                <div style="text-align: center; margin-top: var(--space-10);">
+                    <a href="https://wa.me/5581985008954" class="btn btn--whatsapp btn--large">
+                        <i class="fab fa-whatsapp"></i> Peça pelo WhatsApp
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================
+         4 — GALERIA MODERNA
+         ========================================== -->
+    <section class="gallery-grid section" id="galeria">
+        <div class="section__container">
+            <header class="section__header">
+                <h2 class="section__title">Galeria</h2>
+                <p class="section__subtitle">Conheça nosso ambiente, sabores e momentos especiais</p>
+            </header>
+            <div class="gallery__container">
+                
+                
+                <div class="gallery__item" data-category="bebidas">
+                    <img src="./assets/images/galeria1.jpeg" alt="Caipirinhas Clássicas" loading="lazy">
+                    <div class="gallery__overlay"><i class="fas fa-search-plus"></i></div>
+                </div>
+                <div class="gallery__item" data-category="comidas">
+                    <img src="./assets/images/galeria2.jpeg" alt="Camarão Premium" loading="lazy">
+                    <div class="gallery__overlay"><i class="fas fa-search-plus"></i></div>
+                </div>
+                <div class="gallery__item" data-category="comidas">
+                    <img src="./assets/images/galeria3.jpeg" alt="Torresmo Crocante" loading="lazy">
+                    <div class="gallery__overlay"><i class="fas fa-search-plus"></i></div>
+                </div>
+                <div class="gallery__item" data-category="comidas">
+                    <img src="./assets/images/galeria4.jpeg" alt="Isca de Peixe" loading="lazy">
+                    <div class="gallery__overlay"><i class="fas fa-search-plus"></i></div>
+                </div>
+                <div class="gallery__item" data-category="ambiente">
+                    <img src="./assets/images/galeria5.jpeg" alt="Fachada Boteco Taberna" loading="lazy">
+                    <div class="gallery__overlay"><i class="fas fa-search-plus"></i></div>
+                </div>
+                <div class="gallery__item" data-category="bebidas">
+                    <img src="./assets/images/galeria6.jpeg" alt="Cervejas Especiais" loading="lazy">
+                    <div class="gallery__overlay"><i class="fas fa-search-plus"></i></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================
+         5 — ESPAÇO ATÍPICO — INCLUSÃO E ACOLHIMENTO
+         ========================================== -->
+    <section class="neurospace section" id="espaco-atipico" aria-label="Espaço Atípico - Inclusão e Acolhimento">
+        <!-- Imagem de fundo -->
+        <div class="neurospace__bg-img" aria-hidden="true">
+            <img src="./assets/images/atipico.jpg" alt="" loading="lazy">
+        </div>
+
+        <!-- Overlay gradiente -->
+        <div class="neurospace__overlay" aria-hidden="true"></div>
+
+        <!-- Elementos decorativos -->
+        <div class="neurospace__bg" aria-hidden="true">
+            <div class="neurospace__circle neurospace__circle--1"></div>
+            <div class="neurospace__circle neurospace__circle--2"></div>
+            <div class="neurospace__circle neurospace__circle--3"></div>
+            <div class="neurospace__curve neurospace__curve--1"></div>
+            <div class="neurospace__curve neurospace__curve--2"></div>
+        </div>
+
+        <div class="neurospace__container">
+            <!-- Badge superior -->
+            <div class="neurospace__badge" role="text">
+                <span class="neurospace__badge-icon" aria-hidden="true">💙</span>
+                Inclusão • Respeito • Acolhimento
+            </div>
+
+            <!-- Layout 2 colunas (Desktop) -->
+            <div class="neurospace__layout">
+                <!-- Coluna da esquerda: texto + cards -->
+                <div class="neurospace__content">
+                    <!-- Título e subtítulo -->
+                    <header class="neurospace__header">
+                        <h2 class="neurospace__title">Espaço Atípico</h2>
+                        <p class="neurospace__subtitle">
+                            Porque acreditamos que todos merecem viver bons momentos juntos.
+                        </p>
+                    </header>
+
+                    <!-- Texto institucional -->
+                    <div class="neurospace__text">
+                        <p>No Boteco Taberna, entendemos que cada criança é única.</p>
+                        <p>
+                            Pensando nas famílias que convivem com o Transtorno do Espectro Autista (TEA)
+                            e outras necessidades específicas, estamos criando um ambiente acolhedor,
+                            tranquilo e preparado para proporcionar mais conforto durante a visita.
+                        </p>
+                        <p>
+                            Nosso objetivo é que pais, responsáveis e crianças possam aproveitar
+                            momentos especiais com mais tranquilidade, respeito e inclusão.
+                        </p>
+                    </div>
+
+                    <!-- Card de destaque "Em breve" -->
+                    <div class="neurospace__highlight-card">
+                        <div class="neurospace__highlight-icon" aria-hidden="true">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                            </svg>
+                        </div>
+                        <div class="neurospace__highlight-body">
+                            <h3 class="neurospace__highlight-title">Em breve</h3>
+                            <p class="neurospace__highlight-text">
+                                Estamos preparando um espaço pensado com carinho para acolher
+                                crianças autistas e suas famílias. Nosso compromisso é oferecer
+                                um ambiente mais tranquilo, confortável e inclusivo para que todos
+                                possam aproveitar momentos especiais no Boteco Taberna.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Grid de 4 cards -->
+                    <div class="neurospace__cards">
+                        <article class="neurospace__card">
+                            <div class="neurospace__card-icon" aria-hidden="true">
+                                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
+                                    <polyline points="9 22 9 12 15 12 15 22"/>
+                                </svg>
+                            </div>
+                            <h3 class="neurospace__card-title">🧩 Ambiente acolhedor</h3>
+                            <p class="neurospace__card-text">Espaço pensado para proporcionar conforto e bem-estar às famílias.</p>
+                        </article>
+
+                        <article class="neurospace__card">
+                            <div class="neurospace__card-icon" aria-hidden="true">
+                                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                    <rect x="2" y="3" width="20" height="14" rx="2" ry="2"/>
+                                    <line x1="8" y1="21" x2="16" y2="21"/>
+                                    <line x1="12" y1="17" x2="12" y2="21"/>
+                                </svg>
+                            </div>
+                            <h3 class="neurospace__card-title">🎨 Espaço com atividades</h3>
+                            <p class="neurospace__card-text">Área planejada para oferecer momentos de diversão e tranquilidade às crianças.</p>
+                        </article>
+
+                        <article class="neurospace__card">
+                            <div class="neurospace__card-icon" aria-hidden="true">
+                                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/>
+                                    <circle cx="12" cy="12" r="3"/>
+                                </svg>
+                            </div>
+                            <h3 class="neurospace__card-title">🔇 Área mais tranquila</h3>
+                            <p class="neurospace__card-text">Um ambiente com foco em reduzir estímulos e proporcionar maior conforto.</p>
+                        </article>
+
+                        <article class="neurospace__card">
+                            <div class="neurospace__card-icon" aria-hidden="true">
+                                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+                                    <circle cx="9" cy="7" r="4"/>
+                                    <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
+                                    <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+                                </svg>
+                            </div>
+                            <h3 class="neurospace__card-title">👨‍👩‍👧 Pensado para toda a família</h3>
+                            <p class="neurospace__card-text">Porque bons momentos ficam ainda melhores quando todos podem participar.</p>
+                        </article>
+                    </div>
+                </div>
+
+                <!-- Coluna da direita: imagem decorativa -->
+                <aside class="neurospace__media">
+                    <div class="neurospace__image-wrapper">
+                        <img src="./assets/images/atipico.jpg" alt="Espaço acolhedor do Boteco Taberna - Ambiente preparado para receber famílias" class="neurospace__image" loading="lazy">
+                        <p class="neurospace__image-caption">Imagem ilustrativa. Em breve apresentaremos nosso novo espaço.</p>
+                    </div>
+                </aside>
+            </div>
+
+            <!-- Faixa de destaque inferior -->
+            <div class="neurospace__cta-strip">
+                <div class="neurospace__cta-strip-inner">
+                    <p class="neurospace__cta-text">Mais do que servir bem, queremos acolher pessoas.</p>
+                    <a href="https://wa.me/5581985008954" class="neurospace__cta-btn">
+                        <span>Conheça Nosso Espaço</span>
+                        <svg class="neurospace__cta-arrow" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <line x1="5" y1="12" x2="19" y2="12"/>
+                            <polyline points="12 5 19 12 12 19"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================
+         6 — LOCALIZAÇÃO + WHATSAPP
+         ========================================== -->
+    <section class="location section" id="localizacao">
+        <div class="section__container">
+            <header class="section__header">
+                <h2 class="section__title">Venha Nos Visitar</h2>
+                <p class="section__subtitle">Estamos prontos para receber você e seus amigos</p>
+            </header>
+            <div class="section__content section__content--split">
+                <div class="section__copy location__info">
+                    <div class="location__details">
+                        <div class="location__address">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div>
+                                <strong>Endereço</strong><br>
+                                Rua Exemplo, 123 - Centro<br>
+                                Cidade - Estado, 00000-000
+                            </div>
+                        </div>
+                        <div class="location__phone">
+                            <i class="fas fa-phone"></i>
+                            <div>
+                                <strong>Telefone</strong><br>
+                                (00) 00000-0000
+                            </div>
+                        </div>
+                        <div class="location__hours">
+                            <i class="fas fa-clock"></i>
+                            <div>
+                                <strong>Horário de Funcionamento</strong><br>
+                                Seg a Qui: 17h às 02h<br>
+                                Sex a Dom: 16h às 04h
+                            </div>
+                        </div>
+                    </div>
+                    <div class="location__buttons">
+                        <a href="https://wa.me/5581985008954" class="btn btn--whatsapp btn--large" style="width: 100%; padding: 1.2rem; font-size: 1.1rem;">
+                            <i class="fab fa-whatsapp" style="font-size: 1.4rem;"></i> Fale Conosco no WhatsApp
+                        </a>
+                        <a href="https://maps.google.com/maps?q=Boteco+Taberna" target="_blank" rel="noopener noreferrer" class="btn btn--secondary btn--large" style="width: 100%;">
+                            <i class="fas fa-map-marker-alt"></i> Abrir no Google Maps
+                        </a>
+                    </div>
+                </div>
+                <div class="section-media location__map">
+                    <iframe 
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3656.999999999999!2d-46.633308!3d-23.55052!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2sBoteco%20Taberna!5e0!3m2!1spt-BR!2sbr!4v1600000000000!5m2!1spt-BR!2sbr" 
+                        width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                        title="Localização Boteco Taberna">
+                    </iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================
+         INSTAGRAM - BOTÃO DIRETO
+         ========================================== -->
+    <section class="instagram-btn section" id="instagram">
+        <div class="instagram-btn__container">
+            <a href="https://www.instagram.com/boteco.taberna/" target="_blank" rel="noopener noreferrer" class="instagram-btn__link" aria-label="Seguir Boteco Taberna no Instagram">
+                <span class="instagram-btn__icon" aria-hidden="true">
+                    <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/>
+                    </svg>
+                </span>
+                <span class="instagram-btn__text">Siga-nos no Instagram</span>
+                <span class="instagram-btn__handle">@botecotaberna</span>
+            </a>
+        </div>
+    </section>
+
+    <!-- ==========================================
+         BOTÃO VOLTAR AO TOPO
+         ========================================== -->
+    <button id="scrollToTop" class="scroll-to-top" aria-label="Voltar ao topo">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <!-- ==========================================
+         7 — RODAPÉ
+         ========================================== -->
+    <footer class="footer" id="rodape">
+        <div class="footer__container">
+            <div class="footer__logo">
+                <img src="./assets/images/logocompleto.png" alt="Boteco Taberna Logo">
+                <p class="footer__description">Um pub sofisticado com a essência do boteco brasileiro. Petiscos artesanais, churrasco premium e drinks exclusivos em um ambiente que convida a ficar.</p>
+                <div class="footer__social" style="margin-top: var(--space-4);">
+                    <h3 class="footer__title" style="margin-bottom: var(--space-3);">Redes Sociais</h3>
+                    <div class="social__links">
+                        <a href="https://www.instagram.com/boteco.taberna/" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer__links">
+                <h3 class="footer__title">Links Rápidos</h3>
+                <ul class="footer__list">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#sobre">Sobre</a></li>
+                    <li><a href="#cardapio">Cardápio</a></li>
+                    <li><a href="#galeria">Galeria</a></li>
+                    <li><a href="#espaco-atipico">Espaço Atípico</a></li>
+                    <li><a href="#localizacao">Localização</a></li>
+                </ul>
+            </div>
+            <div class="footer__contact">
+                <h3 class="footer__title">Contato</h3>
+                <p><i class="fas fa-map-marker-alt"></i> Rua Exemplo, 123 - Centro, Cidade/Estado</p>
+                <p><i class="fas fa-phone"></i> (00) 00000-0000</p>
+                <p><i class="fab fa-whatsapp"></i> (00) 00000-0000</p>
+                <p><i class="fas fa-clock"></i> Seg-Dom: 17h às 02h</p>
+            </div>
+            <div class="footer__contact">
+                <h3 class="footer__title">Funcionamento</h3>
+                <p style="margin-bottom: var(--space-2);"><strong>Seg a Qui:</strong> 17h às 02h</p>
+                <p style="margin-bottom: var(--space-2);"><strong>Sex a Dom:</strong> 16h às 04h</p>
+                <a href="https://wa.me/5581985008954" class="btn btn--whatsapp" style="margin-top: var(--space-3);">
+                    <i class="fab fa-whatsapp"></i> WhatsApp
+                </a>
+            </div>
+        </div>
+        <div class="footer__bottom">
+            <p>&copy; 2024 Boteco Taberna. Todos os direitos reservados. Feito com <i class="fas fa-heart" style="color: var(--color-primary);"></i> para você.</p>
+        </div>
+    </footer>
+
+    <!-- ==========================================
+         JAVASCRIPT CONSOLIDADO
+         ========================================== -->
+    <script src="./assets/js/main.js"></script>
+    <script src="./assets/js/animations.js"></script>
+    <script src="./assets/js/header.js"></script>
+    <script src="./assets/js/hero.js"></script>
+
+    <!-- SCRIPT DA GALERIA (lightbox + filtros) -->
+    <script>
+        /* ============================================
+           GALERIA - LIGHTBOX E FILTROS
+           ============================================ */
+        document.addEventListener('DOMContentLoaded', function() {
+            var lightbox = document.getElementById('lightbox');
+            if (!lightbox) return;
+
+            var lightboxImage = document.getElementById('lightboxImage');
+            var lightboxCaption = document.getElementById('lightboxCaption');
+            var lightboxClose = document.getElementById('lightboxClose');
+            var lightboxPrev = document.getElementById('lightboxPrev');
+            var lightboxNext = document.getElementById('lightboxNext');
+            var galleryItems = document.querySelectorAll('.gallery-grid .gallery__item');
+            var currentIndex = 0;
+            var galleryData = Array.from(galleryItems).map(function(item) {
+                return { src: item.querySelector('img').src, alt: item.querySelector('img').alt };
+            });
+
+            // Abrir lightbox
+            galleryItems.forEach(function(item, index) {
+                item.addEventListener('click', function() {
+                    currentIndex = index;
+                    updateLightbox();
+                    lightbox.classList.add('active');
+                    document.body.style.overflow = 'hidden';
+                });
+            });
+
+            function updateLightbox() {
+                var item = galleryData[currentIndex];
+                lightboxImage.src = item.src;
+                lightboxImage.alt = item.alt;
+                lightboxCaption.textContent = item.alt;
+            }
+
+            // Fechar
+            lightboxClose.addEventListener('click', function() {
+                lightbox.classList.remove('active');
+                document.body.style.overflow = '';
+            });
+            lightbox.addEventListener('click', function(e) {
+                if (e.target === lightbox) {
+                    lightbox.classList.remove('active');
+                    document.body.style.overflow = '';
+                }
+            });
+
+            // Navegação
+            lightboxPrev.addEventListener('click', function() {
+                currentIndex = (currentIndex - 1 + galleryData.length) % galleryData.length;
+                updateLightbox();
+            });
+            lightboxNext.addEventListener('click', function() {
+                currentIndex = (currentIndex + 1) % galleryData.length;
+                updateLightbox();
+            });
+
+            // Teclado
+            document.addEventListener('keydown', function(e) {
+                if (!lightbox.classList.contains('active')) return;
+                if (e.key === 'Escape') {
+                    lightbox.classList.remove('active');
+                    document.body.style.overflow = '';
+                } else if (e.key === 'ArrowLeft') {
+                    currentIndex = (currentIndex - 1 + galleryData.length) % galleryData.length;
+                    updateLightbox();
+                } else if (e.key === 'ArrowRight') {
+                    currentIndex = (currentIndex + 1) % galleryData.length;
+                    updateLightbox();
+                }
+            });
+
+            // Filtros da galeria
+            var galleryFilterBtns = document.querySelectorAll('.gallery-filters .filter-btn');
+            var allGalleryItems = document.querySelectorAll('.gallery-grid .gallery__item');
+            galleryFilterBtns.forEach(function(btn) {
+                btn.addEventListener('click', function() {
+                    galleryFilterBtns.forEach(function(b) { b.classList.remove('active'); });
+                    btn.classList.add('active');
+                    var filter = btn.dataset.filter;
+                    allGalleryItems.forEach(function(item) {
+                        var category = item.dataset.category;
+                        item.style.display = (filter === 'all' || category === filter) ? 'block' : 'none';
+                    });
+                });
+            });
+        });
+    </script>
+
+    <!-- SCRIPT DE FORMULÁRIOS -->
+    <script>
+        /* ============================================
+           FORMULÁRIOS - CONTATO E RESERVA
+           ============================================ */
+        document.addEventListener('DOMContentLoaded', function() {
+            // Notificação
+            function showNotification(message, type) {
+                var existing = document.querySelector('.notification');
+                if (existing) existing.remove();
+                var notification = document.createElement('div');
+                notification.className = 'notification notification--' + (type || 'success');
+                notification.innerHTML = '<div class="notification__content"><i class="fas ' + (type === 'success' ? 'fa-check-circle' : 'fa-exclamation-circle') + '"></i><span>' + message + '</span></div>';
+                document.body.appendChild(notification);
+                setTimeout(function() {
+                    notification.classList.add('notification--hide');
+                    setTimeout(function() { notification.remove(); }, 500);
+                }, 4000);
+            }
+
+            // Formulário de contato
+            var contactForm = document.getElementById('contactForm');
+            if (contactForm) {
+                contactForm.addEventListener('submit', function(e) {
+                    e.preventDefault();
+                    var name = document.getElementById('name');
+                    var email = document.getElementById('email');
+                    var subject = document.getElementById('subject');
+                    var message = document.getElementById('message');
+                    var isValid = true;
+                    document.querySelectorAll('#contactForm .form__error').forEach(function(el) { el.classList.remove('active'); });
+
+                    if (!name.value.trim()) { document.getElementById('nameError').textContent = 'Nome é obrigatório'; document.getElementById('nameError').classList.add('active'); isValid = false; }
+                    var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                    if (!email.value.trim() || !emailRegex.test(email.value)) { document.getElementById('emailError').textContent = 'Email válido é obrigatório'; document.getElementById('emailError').classList.add('active'); isValid = false; }
+                    if (!subject.value.trim()) { document.getElementById('subjectError').textContent = 'Assunto é obrigatório'; document.getElementById('subjectError').classList.add('active'); isValid = false; }
+                    if (!message.value.trim()) { document.getElementById('messageError').textContent = 'Mensagem é obrigatória'; document.getElementById('messageError').classList.add('active'); isValid = false; }
+
+                    if (isValid) { showNotification('Mensagem enviada com sucesso!', 'success'); contactForm.reset(); }
+                });
+            }
+
+            // Formulário de reserva
+            var reservationForm = document.getElementById('reservationForm');
+            if (reservationForm) {
+                reservationForm.addEventListener('submit', function(e) {
+                    e.preventDefault();
+                    var name = document.getElementById('resName');
+                    var phone = document.getElementById('resPhone');
+                    var date = document.getElementById('resDate');
+                    var time = document.getElementById('resTime');
+                    var people = document.getElementById('resPeople');
+                    if (name.value && phone.value && date.value && time.value && people.value) {
+                        showNotification('Reserva realizada com sucesso!', 'success');
+                        reservationForm.reset();
+                    } else {
+                        showNotification('Preencha todos os campos obrigatórios', 'error');
+                    }
+                });
+            }
+        });
+    </script>
+
+    <!-- SCRIPT: NAVEGAÇÃO POR ÂNCORAS E DESTAQUE ATIVO -->
+    <script>
+        /* ============================================
+           NAVEGAÇÃO - SCROLL SUAVE E MENU ATIVO
+           ============================================ */
+        document.addEventListener('DOMContentLoaded', function() {
+            // Scroll suave para links de âncora
+            document.querySelectorAll('a[href^="#"]').forEach(function(anchor) {
+                anchor.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    var targetId = this.getAttribute('href');
+                    if (targetId === '#') return;
+                    var target = document.querySelector(targetId);
+                    if (target) {
+                        var headerOffset = 100;
+                        var elementPosition = target.getBoundingClientRect().top;
+                        var offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+                        window.scrollTo({ top: offsetPosition, behavior: 'smooth' });
+                    }
+                });
+            });
+
+            // Destaque do link ativo conforme seção visível
+            var sections = document.querySelectorAll('section[id]');
+            var navLinks = document.querySelectorAll('.nav__link');
+            
+            function updateActiveLink() {
+                var current = '';
+                var scrollPos = window.pageYOffset + 150;
+                sections.forEach(function(section) {
+                    var sectionTop = section.offsetTop;
+                    var sectionHeight = section.offsetHeight;
+                    if (scrollPos >= sectionTop && scrollPos < sectionTop + sectionHeight) {
+                        current = section.getAttribute('id');
+                    }
+                });
+                navLinks.forEach(function(link) {
+                    link.classList.remove('active');
+                    if (link.getAttribute('href') === '#' + current) {
+                        link.classList.add('active');
+                    }
+                });
+            }
+
+            // Throttle manual para o scroll
+            var ticking = false;
+            window.addEventListener('scroll', function() {
+                if (!ticking) {
+                    window.requestAnimationFrame(function() {
+                        updateActiveLink();
+                        ticking = false;
+                    });
+                    ticking = true;
+                }
+            }, { passive: true });
+            updateActiveLink();
+
+            // Botão Voltar ao Topo
+            var scrollBtn = document.getElementById('scrollToTop');
+            window.addEventListener('scroll', function() {
+                if (window.pageYOffset > 500) {
+                    scrollBtn.classList.add('visible');
+                } else {
+                    scrollBtn.classList.remove('visible');
+                }
+            }, { passive: true });
+            scrollBtn.addEventListener('click', function() {
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            });
+        });
+    </script>
+
+    <style>
+        /* ============================================
+           ESTILOS PARA O PRELOADER
+           ============================================ */
+        .preloader {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: var(--color-bg-primary, #050505);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 9999;
+            transition: opacity 0.5s ease, visibility 0.5s ease;
+        }
+        .preloader.hidden {
+            opacity: 0;
+            visibility: hidden;
+        }
+        .preloader__content {
+            text-align: center;
+        }
+        .preloader__logo {
+            max-width: 280px;
+            width: 100%;
+            animation: logoPulse 1.5s ease-in-out infinite alternate;
+        }
+        @keyframes logoPulse {
+            0% { transform: scale(0.95); opacity: 0.8; }
+            100% { transform: scale(1); opacity: 1; }
+        }
+        
+        /* ============================================
+           ESTILOS PARA O BOTÃO VOLTAR AO TOPO
+           ============================================ */
+        .scroll-to-top {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 50px;
+            height: 50px;
+            background: var(--color-primary, #F0F020);
+            color: var(--color-bg-primary, #050505);
+            border: none;
+            border-radius: 50%;
+            font-size: 1.2rem;
+            cursor: pointer;
+            z-index: 999;
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(20px);
+            transition: all 0.3s cubic-bezier(0.22, 1, 0.36, 1);
+            box-shadow: 0 4px 15px rgba(240, 240, 32, 0.3);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .scroll-to-top.visible {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+        .scroll-to-top:hover {
+            background: var(--color-primary-dark, #D1D100);
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(240, 240, 32, 0.4);
+        }
+        @media (max-width: 768px) {
+            .preloader__logo {
+                max-width: 200px;
+            }
+        }
+    </style>
+    
+    <script>
+        /* ============================================
+           PRELOADER - OCULTAR APÓS CARREGAMENTO
+           ============================================ */
+        document.addEventListener('DOMContentLoaded', function() {
+            var preloader = document.getElementById('preloader');
+            if (preloader) {
+                setTimeout(function() {
+                    preloader.classList.add('hidden');
+                }, 500);
+            }
+        });
+    </script>
+
+    <!-- LIGHTBOX STRUCTURE -->
+    <div id="lightbox" class="lightbox">
+        <button id="lightboxClose" class="lightbox__close" aria-label="Fechar"><i class="fas fa-times"></i></button>
+        <button id="lightboxPrev" class="lightbox__nav lightbox__nav--prev" aria-label="Anterior"><i class="fas fa-chevron-left"></i></button>
+        <button id="lightboxNext" class="lightbox__nav lightbox__nav--next" aria-label="Próximo"><i class="fas fa-chevron-right"></i></button>
+        <div class="lightbox__content">
+            <img id="lightboxImage" src="" alt="">
+            <p id="lightboxCaption" class="lightbox__caption"></p>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,366 @@
+/* ========================================
+   BOTECO TABERNA PRAIA - ANIMATIONS
+   Premium Micro-interactions v2.0
+   ======================================== */
+
+/* ========================================
+   SCROLL-TRIGGERED REVEALS
+   ======================================== */
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeInRight {
+    from {
+        opacity: 0;
+        transform: translateX(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes scaleIn {
+    from {
+        opacity: 0;
+        transform: scale(0.92);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes scaleOut {
+    from {
+        opacity: 0;
+        transform: scale(1.08);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* ==========================================
+   CLASSES UTILITÁRIAS DE ANIMAÇÃO
+   ==========================================
+   Adicione estas classes aos elementos HTML
+   para ativar as animações correspondentes.
+   Exemplo: <div class="animate-fade-up">
+   ========================================== */
+
+/* Aparece subindo */
+.animate-fade-up {
+    animation: fadeInUp 0.7s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+.animate-fade-down {
+    animation: fadeInDown 0.7s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+.animate-fade-left {
+    animation: fadeInLeft 0.7s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+.animate-fade-right {
+    animation: fadeInRight 0.7s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+.animate-scale {
+    animation: scaleIn 0.6s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+}
+
+.animate-scale-out {
+    animation: scaleOut 0.6s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+}
+
+/* ==========================================
+   ATRASOS DE ANIMAÇÃO (STAGGER)
+   ==========================================
+   Use estas classes para criar efeito
+   cascata: cada elemento aparece um após o outro.
+   Exemplo: <div class="animate-fade-up delay-200ms">
+   ========================================== */
+.delay-50ms { animation-delay: 50ms; }
+.delay-100ms { animation-delay: 100ms; }
+.delay-150ms { animation-delay: 150ms; }
+.delay-200ms { animation-delay: 200ms; }
+.delay-250ms { animation-delay: 250ms; }
+.delay-300ms { animation-delay: 300ms; }
+.delay-400ms { animation-delay: 400ms; }
+.delay-500ms { animation-delay: 500ms; }
+.delay-600ms { animation-delay: 600ms; }
+.delay-700ms { animation-delay: 700ms; }
+
+/* ==========================================
+   EFEITOS DE HOVER (PASSAR O MOUSE)
+   ==========================================
+   Adicione estas classes para efeitos
+   quando o usuário passar o mouse.
+   ========================================== */
+
+/* Aumenta de tamanho ao passar o mouse */
+.hover-scale {
+    transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.hover-scale:hover {
+    transform: scale(1.04);
+}
+
+/* Glow on hover */
+.hover-glow {
+    transition: box-shadow 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.hover-glow:hover {
+    box-shadow: 0 0 30px rgba(240, 240, 32, 0.4);
+}
+
+/* Lift on hover */
+.hover-lift {
+    transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1),
+                box-shadow 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.hover-lift:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+}
+
+/* Border glow on hover */
+.hover-border-glow {
+    position: relative;
+}
+
+.hover-border-glow::after {
+    content: '';
+    position: absolute;
+    inset: -1px;
+    border-radius: inherit;
+    background: linear-gradient(135deg, var(--color-primary), transparent 50%);
+    opacity: 0;
+    transition: opacity 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+    z-index: -1;
+}
+
+.hover-border-glow:hover::after {
+    opacity: 1;
+}
+
+/* ==========================================
+   MICRO-INTERAÇÕES
+   ==========================================
+   Pequenos efeitos que melhoram a
+   experiência do usuário.
+   ========================================== */
+
+/* Zoom em imagens ao passar o mouse */
+.img-zoom {
+    overflow: hidden;
+}
+
+.img-zoom img {
+    transition: transform 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.img-zoom:hover img {
+    transform: scale(1.08);
+}
+
+/* Shimmer effect on buttons */
+.btn-shimmer {
+    position: relative;
+    overflow: hidden;
+}
+
+.btn-shimmer::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    transition: left 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.btn-shimmer:hover::before {
+    left: 100%;
+}
+
+/* Pulsing glow */
+@keyframes pulseGlow {
+    0%, 100% {
+        box-shadow: 0 0 20px rgba(240, 240, 32, 0.2);
+    }
+    50% {
+        box-shadow: 0 0 40px rgba(240, 240, 32, 0.4);
+    }
+}
+
+.pulse-glow {
+    animation: pulseGlow 3s ease-in-out infinite;
+}
+
+/* Gentle float */
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+.float {
+    animation: float 6s ease-in-out infinite;
+}
+
+/* Subtle rotate */
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.rotate {
+    animation: rotate 20s linear infinite;
+}
+
+/* ==========================================
+   ANIMAÇÕES DE CARREGAMENTO
+   ========================================== */
+
+/* Efeito cascata para grids */
+.stagger-enter > * {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 0.6s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+.stagger-enter > *:nth-child(1) { animation-delay: 0ms; }
+.stagger-enter > *:nth-child(2) { animation-delay: 80ms; }
+.stagger-enter > *:nth-child(3) { animation-delay: 160ms; }
+.stagger-enter > *:nth-child(4) { animation-delay: 240ms; }
+.stagger-enter > *:nth-child(5) { animation-delay: 320ms; }
+.stagger-enter > *:nth-child(6) { animation-delay: 400ms; }
+
+/* Skeleton loading */
+@keyframes skeletonLoad {
+    0% {
+        background-position: -200% 0;
+    }
+    100% {
+        background-position: 200% 0;
+    }
+}
+
+.skeleton {
+    background: linear-gradient(90deg, 
+        var(--color-bg-tertiary) 25%, 
+        var(--color-bg-elevated) 50%, 
+        var(--color-bg-tertiary) 75%
+    );
+    background-size: 200% 100%;
+    animation: skeletonLoad 1.5s infinite;
+    border-radius: var(--radius-md);
+}
+
+/* Page transition */
+@keyframes pageEnter {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.page-enter {
+    animation: pageEnter 0.5s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+/* ==========================================
+   EFEITO PARALLAX
+   ==========================================
+   Cria profundidade ao rolar a página.
+   ========================================== */
+
+.parallax {
+    will-change: transform;
+}
+
+/* ==========================================
+   ACESSIBILIDADE - MOVIMENTO REDUZIDO
+   ==========================================
+   Desativa animações para usuários que
+   preferem movimento reduzido nas
+   configurações do sistema.
+   ========================================== */
+
+@media (prefers-reduced-motion: reduce) {
+    .animate-fade-up,
+    .animate-fade-down,
+    .animate-fade-left,
+    .animate-fade-right,
+    .animate-scale,
+    .animate-scale-out,
+    .stagger-enter > *,
+    .page-enter {
+        animation: none !important;
+        opacity: 1 !important;
+        transform: none !important;
+    }
+    
+    .hover-scale,
+    .hover-glow,
+    .hover-lift,
+    .img-zoom img,
+    .btn-shimmer::before {
+        transition: none !important;
+    }
+    
+    .float,
+    .rotate,
+    .pulse-glow {
+        animation: none !important;
+    }
+}
