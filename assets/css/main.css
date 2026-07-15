@@ -341,9 +341,9 @@ a {
     padding: 0 var(--space-8);
 }
 
-/* Section Base */
+/* Section Base - Mobile First */
 .section {
-    padding: clamp(4.75rem, 7vw, 6.25rem) 0;
+    padding: clamp(2.5rem, 6vw, 4rem) 0;
     position: relative;
 }
 
@@ -433,11 +433,11 @@ a {
 .header__container {
     max-width: 1400px;
     margin: 0 auto;
-    padding: 0 var(--space-6);
+    padding: 0 var(--space-3);
     display: flex;
     align-items: center;
     justify-content: space-between;
-    height: 72px;
+    height: 60px;
 }
 
 .header__logo {
